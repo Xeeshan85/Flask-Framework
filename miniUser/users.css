@@ -1,0 +1,86 @@
+/* static/css/users.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #1d1c1c, #4c4f5a);
+    color: #fff;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(12, 3, 3, 0.8);
+    color: #fff;
+}
+
+tr:hover {
+    background-color: rgba(12, 3, 3, 0.6);
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.button-row a {
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Add space between buttons */
+}
+.home-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-button:hover {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.delete-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #6ea9e0, #475a83);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+    background: linear-gradient(45deg, #9524ac, #ec42a0);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}

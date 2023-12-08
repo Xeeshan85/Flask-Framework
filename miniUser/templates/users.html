@@ -1,0 +1,48 @@
+<!-- templates/users.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='users.css') }}">
+</head>
+<body>
+    <h1>Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Course</th>
+                <th>Action</th> <!-- New column for delete buttons -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.address }}</td>
+                    <td>{{ user.course }}</td>
+                    <td>
+                        <form method="POST" action="{{ url_for('delete_user', user_id=user.id) }}">
+                            <!-- Add the CSRF token here -->
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="button-row">
+        <a href="/" class="home-button">Home</a>
+        <a href="/forms" class="home-button">Add User</a>
+    </div>
+</body>
+</html>
