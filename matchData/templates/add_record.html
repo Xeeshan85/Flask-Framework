@@ -1,0 +1,121 @@
+<!-- templates/add_record.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 80px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 190vh;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            position: fixed;
+            top: 0;
+            background-color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        form {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Record</h1>
+    <form action="/add_record" method="post">
+        <!-- Add input fields for the match record -->
+        <label for="match_id">Match ID:</label>
+        <input type="text" name="match_id" required>
+        <label for="innings_id">Innings ID:</label>
+        <input type="text" name="innings_id" required>
+        <label for="over_id">Over Id:</label>
+        <input type="text" name="over_id" required>
+        <label for="ball_id">Ball ID:</label>
+        <input type="text" name="ball_id" required>
+        <label for="team_batting_id">Team Batting ID:</label>
+        <input type="text" name="team_batting_id" required>
+        <label for="team_bowling_id">Team Bowling ID:</label>
+        <input type="text" name="team_bowling_id" required>
+        <label for="striker_id">Striker ID:</label>
+        <input type="text" name="striker_id" required>
+        <label for="striker_batting_position">Striker Batting Position:</label>
+        <input type="text" name="striker_batting_position" required>
+        <label for="non_striker_id">Non Striker ID:</label>
+        <input type="text" name="non_striker_id" required>
+        <label for="bowler_id">Bowler ID:</label>
+        <input type="text" name="bowler_id" required>
+        <label for="batsman_scored">Batsman Scored:</label>
+        <input type="text" name="batsman_scored" required>
+        <button type="submit" class="home-button">Add Record</button>
+    </form>
+</body>
+</html>

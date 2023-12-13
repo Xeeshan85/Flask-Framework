@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC Match Data!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        #welcome-msg {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s forwards;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>ICC Match Data!</h1>
+
+    <!-- Add a button that links to the /view route -->
+    <a href="/view">
+        <button>View Data</button>
+    </a>
+
+    <!-- Add a button that links to the /add route -->
+    <a href="/add_record">
+        <button>Add Data</button>
+    </a>
+    
+
+    <div id="welcome-msg">Welcome to the ICC Match Data Dashboard!</div>
+
+    <script>
+        // JavaScript for the welcome message animation
+        setTimeout(function() {
+            document.getElementById('welcome-msg').style.opacity = '1';
+        }, 2000);
+    </script>
+</body>
+</html>
